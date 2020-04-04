@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.all-page {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #272727;
+}
+
+.all-page::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  width: 100px;
+  height: 100%;
+  border-right: 1px solid #747474;
+  float: left;
+  margin-right: 20px;
+  padding-top: 20px;
+  color: #747474;
+  line-height: 60px;
+  text-align: center;
+}
+
+nav .square {
+  width: 60px;
+  height: 60px;
+  margin: 20px 20px;
+}
+
+.red:hover, .yellow:hover, .green:hover {
+  border-radius: 30%;
+}
+
+.red {
+  background-color: #FF652F;
+}
+
+.yellow {
+  background-color: #FFE400;
+}
+
+.green {
+  background-color: #14A27C;
+}
+
+.selected {
+  font-size: 30px;
+  color: white;
+}
+
+.delete-all-button {
+  font-size: 25px;
+}
+
+.delete-all-button:hover {
+  font-size: 28px;
+  color: white;
+}
+
+main {
+  overflow-y: scroll;
+  width: calc(100% - 120px);
+  height: 100%;
+  float: right;
+}
+
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section {
+  position: relative;
+  height: 300px;
+  float: left;
+}
+
+.post-it {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+}
+
+.post-it:hover, .post-it:focus {
+  width: 240px;
+  height: 240px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  padding: 3px;
+  display: none;
+  color: #272727;
+}
+
+.post-it:hover .delete-button {
+  display: inline-block;
+}
+
+.delete-button:hover {
+  font-size: 120%;
+}
+
+.empty {
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #747474;
+  font-size: 70px;
+}
+
+.delete-all-button, .red, .green, .yellow {
+  transition: all 0.5s;
+}
+
+.empty i, .delete-button {
+  transition: all 0.3s;
+}
+
+.empty i:hover {
+  font-size: 80px;
+  color: white;
+}
+
+.post-it-input {
+  background-color: #FF652F;
+  border: 0;
+  width: 190px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #272727;
+}
+
+.post-it-input:focus {
+  outline: 0;
+}
+
+/* Extra-small devices */
+section {
+  width: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 655px) {
+  section {
+    width: calc(100% / 2);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 920px) {
+  section {
+    width: calc(100% / 3);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) {
+  section {
+    width: calc(100% / 4);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1460px) {
+  section {
+    width: calc(100% / 5);
+  }
+}
